@@ -70,7 +70,7 @@ function onImageLoad() {
             const roadY = canvas.height / 2 +145;
             const roadHeight = 1000; // El grosor de la carretera
         
-            ctx.fillStyle = 'black';
+            ctx.fillStyle = 'purple';
             ctx.fillRect(0, roadY, canvas.width, roadHeight);
         }
         
@@ -130,10 +130,10 @@ function onImageLoad() {
 
         //Pinta el score(record)
         function drawScore() {
-            ctx.fillStyle = 'black';
-            ctx.font = '24px Arial';
-            ctx.fillText('Score: ' + score, canvas.width / 2 -140 , 60);
-            ctx.fillText('High Score: ' + highScore, canvas.width / 2  , 60);
+            ctx.fillStyle = 'white';
+            ctx.font = '28px Arial';
+            ctx.fillText('Score: ' + (75-score), canvas.width / 2 -140 , 60);
+            ctx.fillText('High Score: ' + (75-highScore), canvas.width / 2  , 60);
         }
 
         function updateScore(newPoints) {
@@ -145,6 +145,9 @@ function onImageLoad() {
                 plusTenTimer = 120; // 2 segundos en frames (suponiendo 60fps)
                 plusTenPosition.x = canvas.width / 2 - 45;; // Ajusta para que aparezca cerca del jugador
                 plusTenPosition.y = 120;
+            }
+            if (score>75){
+                location.href='./win.html';
             }
         }
 
@@ -186,7 +189,7 @@ function onImageLoad() {
 
         //Instrucciones del juego
         function drawTapToJumpText() {
-            const text = "Tap the screen to jump";
+            const text = "Tik om te springen";
             ctx.fillStyle = 'white'; // Elige el color del texto
             ctx.font = '20px Arial'; // Elige el tamaño de la fuente y el estilo
             const textWidth = ctx.measureText(text).width;
