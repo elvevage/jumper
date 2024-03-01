@@ -4,15 +4,19 @@ body, html {
     overflow: hidden;
 }
 
-canvas {
+#gameCanvas {
     display: block;
-    background-color: #aea78b;
+    background-color: #FFC0CB;
+    background-image: url("../assets/images/winx-bg.jpg"); /* The image used */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
     width: 100%;
     height: 100vh;
 }
 
 #restartButton {
-    background-color: black; /* Fondo negro */
+    background-color: #900C3F; /* Fondo negro */
     color: white;           /* Texto blanco */
     border: none;           /* Sin borde */
     padding: 10px 20px;     /* Espaciado interno */
