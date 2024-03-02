@@ -132,8 +132,8 @@ function onImageLoad() {
         function drawScore() {
             ctx.fillStyle = 'white';
             ctx.font = '28px Arial';
-            ctx.fillText('Score: ' + (75-score), canvas.width / 2 -140 , 60);
-            ctx.fillText('High Score: ' + (75-highScore), canvas.width / 2  , 60);
+            ctx.fillText('Score: ' + (16-score/2), canvas.width / 2 -140 , 60);
+            ctx.fillText('High Score: ' + (16-highScore/2), canvas.width / 2  , 60);
         }
 
         function updateScore(newPoints) {
@@ -146,7 +146,7 @@ function onImageLoad() {
                 plusTenPosition.x = canvas.width / 2 - 45;; // Ajusta para que aparezca cerca del jugador
                 plusTenPosition.y = 120;
             }
-            if (score>75){
+            if (score>32){
                 location.href='./win.html';
             }
         }
